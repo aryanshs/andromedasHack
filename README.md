@@ -1,2 +1,1 @@
-# andromedasHack
-Tool for Visualizing Biological Experiments in Space.
+Tool for Visualizing Biologic Experiments conducted in Space.
