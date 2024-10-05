@@ -1,0 +1,62 @@
+/* Navigation column and layout */
+.navColumn {
+  padding: 0 1rem 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navColumn .nasaLogo {
+  width: 4%;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Regular link styling */
+.navLinks a {
+  position: relative; /* To use for underline animations */
+  text-decoration: none;
+  color: white;
+  opacity: 0.8; /* Reduced opacity for inactive links */
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect with animation */
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  left: 0;
+  bottom: -5px; /* Position slightly below the text */
+  background-color: #196da9; /* Underline color from the NASA logo */
+  transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.navLinks a:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+.navLinks a:hover {
+  color: #196da9; /* Change text color on hover to match the NASA logo blue */
+  opacity: 1; /* Fully opaque on hover */
+}
+
+/* Styling for the active (selected) link */
+.navLinks a.active {
+  color: #196da9; /* Highlight the active link with the NASA logo blue */
+  opacity: 1; /* Full opacity for the active link */
+}
+
+/* Add the underline effect for the active link */
+.navLinks a.active::after {
+  width: 100%; /* Keep underline visible for the active link */
+}

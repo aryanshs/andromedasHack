@@ -1,25 +1,25 @@
 // src/App.js
 import React, { useState } from "react";
 import VisualizeStudy from "./components/VisualizeStudy";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Experiments from "./components/Experiments";
+import About from "./components/About";
+import Navigation from "./components/Navigation";
+import "./App.css";
 
 const App = () => {
-  const [studyData, setStudyData] = useState(null);
-
-  const handleFetchSuccess = (data) => {
-    setStudyData(data);
-  };
-
   return (
-    <div>
-      <h1>NASA Study Visualizer</h1>
-      <VisualizeStudy onFetchSuccess={handleFetchSuccess} />
-      {studyData && (
-        <div>
-          <h2>Study Data:</h2>
-          <pre>{JSON.stringify(studyData, null, 2)}</pre>
-        </div>
-      )}
-    </div>
+    <Router>
+      <div className="appContainer">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/experiments" element={<Experiments />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
