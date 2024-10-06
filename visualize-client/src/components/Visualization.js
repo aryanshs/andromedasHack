@@ -24,8 +24,7 @@ export default function Visualization() {
   }, [studyId]);
 
   const visualizeStudy = () => {
-    // Redirect to the viz_379.html file within the same tab
-    window.location.href = "/viz_379.html"; // Ensure this file is in the public folder
+    window.location.href = "/viz_379.html"; 
   };
 
   return (
