@@ -5,8 +5,10 @@
 .nasaStudyContainer {
   display: flex;
   flex-direction: column;
-  gap: 6%;
-  padding: 2% 8% 0 8%;
+  gap: 2em;
+  padding: 2% 8% 2% 8%;
+  min-height: 100vh;
+  flex: 1;
 }
 
 .nasaStudyHeadingBox {
@@ -64,8 +66,27 @@
   border-radius: 20px;
 }
 
+.hrFirst {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hrFirst hr {
+  width: 50%;
+}
+
+.hrSecond {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hrSecond hr {
+  width: 50%;
+}
+
 .studyNasaObjectivesConditionsImageBox {
   display: flex;
+  padding: 2% 0 2% 0;
 }
 
 .studyNasaImageBox img {
@@ -105,4 +126,43 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.nasaStudyExperimentalOverviewBox {
+  display: flex;
+  padding: 2% 0 2% 0;
+}
+
+.nasaStudyExperimentalDescriptionBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.launchRocketImageBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.launchRocketImageBox img {
+  width: 50%;
+}
+
+.experimentList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nasaStudyName {
+  background: linear-gradient(90deg, #f17d6c 50%, #ffffff 80%);
+  background-clip: text; /* Apply the gradient only to the text */
+  -webkit-background-clip: text; /* For WebKit compatibility */
+  color: transparent; /* Make the text itself transparent to show the gradient */
+
+  /* Subtle 3D shadow */
+  text-shadow: 1px 1px 3px rgb(204, 227, 242),
+    /* Top-left shadow */ 2px 2px 6px rrgb(204, 227, 242); /* Bottom-right shadow for more depth */
 }

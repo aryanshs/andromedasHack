@@ -1,9 +1,11 @@
 .appContainer {
   background-image: url("./images/homeBackground.JPG");
-  background-size: cover;
+  background-size: cover; /* Cover the container */
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Ensure no border-radius for the background image container */

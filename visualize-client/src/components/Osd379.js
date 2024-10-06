@@ -3,6 +3,7 @@ import "../App.css";
 import { useNavigate } from "react-router-dom";
 import rocket from "../images/roxket.JPG";
 import oldMan from "../images/oldMan.jpeg";
+import launching_space from "../images/launching_space.JPG";
 import "../styles/Osd379.css";
 
 export default function Osd379() {
@@ -17,7 +18,9 @@ export default function Osd379() {
     <div className="nasaStudyContainer bodyScreenFit">
       <div className="nasaStudyHeadingBox">
         <div className="nasaStudyHeadingText">
-          <h1>NASA OSD-379 Study:</h1>
+          <h1>
+            NASA <span className="nasaStudyName">OSD-379</span> Study:
+          </h1>
           <p>
             Transcriptional profiling of livers from mice flown on Rodent
             Research Reference Mission-1 (RRRM-1).
@@ -53,7 +56,10 @@ export default function Osd379() {
           <img src={rocket} alt="rocket" className="studyRocketIntroImage" />
         </div>
       </div>
-      <hr />
+      <div className="hrFirst">
+        <hr />
+      </div>
+
       <div className="studyNasaObjectivesConditionsImageBox">
         <div className="studyNasaImageBox">
           <img src={oldMan} className="studyNasaOldMan" />
@@ -98,6 +104,44 @@ export default function Osd379() {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+
+      <div className="hrSecond">
+        <hr />
+      </div>
+
+      <div className="nasaStudyExperimentalOverviewBox">
+        <div className="nasaStudyExperimentalDescriptionBox">
+          <h2>Experimental Overview:</h2>
+          <p>How did we Conduct this Space Experiment?</p>
+          <div className="experimentList">
+            <p>Subjects Per Group:</p>
+            <ul>
+              <li>Total: 160 female BALB/cAnNTac mice</li>
+              <li>
+                Spaceflown Mice:{" "}
+                <ul>
+                  <li>40 mice: 20 young (10-12 weeks), 20 older (32 weeks)</li>
+                  <li>
+                    Sacrificed On-Orbit: 10 young, 10 old after 22-23 days
+                  </li>
+                  <li>
+                    Returned to Earth: 10 young, 10 old after 40 days with 2-day
+                    recovery
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="launchRocketImageBox">
+          <img
+            src={launching_space}
+            alt="launching_space"
+            className="launchRocketImage"
+          />
         </div>
       </div>
     </div>

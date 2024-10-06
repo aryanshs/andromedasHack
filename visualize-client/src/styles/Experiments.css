@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 10%;
+  gap: 5rem;
 }
 
 /* Background image container with the solar system */
@@ -51,7 +51,6 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  gap: 100px;
   /* margin-top: -225px; Pull the cards upwards slightly */
   z-index: 3; /* Ensure it's above the image */
 }

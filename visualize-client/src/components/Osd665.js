@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import rocket from "../images/roxket.JPG";
 import oldMan from "../images/oldMan.jpeg";
 import "../styles/Osd379.css";
+import launching_space from "../images/launching_space.JPG";
 
 export default function Osd379() {
   const [osd379Data, setOsd379Data] = useState([]);
@@ -17,7 +18,9 @@ export default function Osd379() {
     <div className="nasaStudyContainer bodyScreenFit">
       <div className="nasaStudyHeadingBox">
         <div className="nasaStudyHeadingText">
-          <h1>NASA OSD-665 Study:</h1>
+          <h1>
+            NASA <span className="nasaStudyName">OSD-665</span> Study:
+          </h1>
           <p>
             Transcriptional profiling of right extensor digitorum longus muscle
             from mice flown on the RR-23 mission
@@ -53,7 +56,9 @@ export default function Osd379() {
           <img src={rocket} alt="rocket" className="studyRocketIntroImage" />
         </div>
       </div>
-      <hr />
+      <div className="hrFirst">
+        <hr />
+      </div>
       <div className="studyNasaObjectivesConditionsImageBox">
         <div className="studyNasaImageBox">
           <img src={oldMan} className="studyNasaOldMan" />
@@ -100,6 +105,31 @@ export default function Osd379() {
               transcriptomic profiling.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="hrSecond">
+        <hr />
+      </div>
+
+      <div className="nasaStudyExperimentalOverviewBox">
+        <div className="nasaStudyExperimentalDescriptionBox">
+          <h2>Experimental Overview:</h2>
+          <p>How did we Conduct this Space Experiment?</p>
+          <div className="experimentList">
+            <p>Number of Subjects per Group:</p>
+            <ul>
+              <li>20 Flight mice, 20 HGC, 20 VGC.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="launchRocketImageBox">
+          <img
+            src={launching_space}
+            alt="launching_space"
+            className="launchRocketImage"
+          />
         </div>
       </div>
     </div>
