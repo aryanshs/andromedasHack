@@ -8,11 +8,11 @@ export default function Experiments({ setExpermentBackground }) {
   const navigate = useNavigate();
 
   const getOsd379Data = async () => {
-    navigate("/visualize/379", { state: { studyId: 379 } });
+    navigate("/osd379", { state: { studyId: 379 } });
   };
 
   const getOsd665Data = async () => {
-    navigate("/visualize/665", { state: { studyId: 665 } });
+    navigate("/osd665", { state: { studyId: 665 } });
   };
 
   const visualizeStudy = () => {
@@ -45,7 +45,7 @@ export default function Experiments({ setExpermentBackground }) {
             </p>
           </div>
 
-          <button onClick={visualizeStudy}>View Details</button>
+          <button onClick={getOsd379Data}>View Details</button>
         </div>
         <div className="experimentsStudyCard card665">
           <div className="experimentsHeadingBox">

@@ -1,0 +1,108 @@
+* {
+  color: white;
+}
+
+.nasaStudyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6%;
+  padding: 2% 8% 0 8%;
+}
+
+.nasaStudyHeadingBox {
+  display: flex;
+}
+
+.nasaStudyHeadingText {
+  flex: 1;
+}
+
+.nasaStudyHeadingButtonBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nasaStudyHeadingButtonBox button {
+  background-color: #1f78a0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nasaStudyHeadingButtonBox button:hover {
+  background-color: #297699;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid #8fa594;
+}
+
+.studyIntroBox {
+  display: flex;
+}
+
+.studyIntroBox p {
+  flex: 1;
+}
+
+.studyIntroBox .studyRocketIntroImageContainer {
+  flex: 1;
+}
+
+.studyRocketIntroImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.studyRocketIntroImageContainer img {
+  width: 30%;
+  border-radius: 20px;
+}
+
+.studyNasaObjectivesConditionsImageBox {
+  display: flex;
+}
+
+.studyNasaImageBox img {
+  width: 40%;
+  border-radius: 20px;
+}
+
+.studyNasaObjectivesConditionsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.studyNasaObjectivesBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.studyNasaObjectivesBox ul li {
+  margin-bottom: 1%;
+}
+
+.studyNasaConditionsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.studyNasaConditionsBox ul li {
+  margin-bottom: 1%;
+}
+
+.sampleCollectionBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
