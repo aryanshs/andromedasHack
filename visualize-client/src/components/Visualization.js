@@ -13,19 +13,24 @@ export default function Visualization() {
   useEffect(() => {
     fetchStudyData(studyId).then((data) => {
       //   console.log(data);
-      setStudyData(data);
+      setStudyData(JSON.stringify(data));
     });
   }, [studyId]);
 
   return (
     <div className="visualizationContainer bodyScreenFit">
-      <h1>Visualization</h1>
-      {studyData && (
-        <div>
-          <h2>Study Data:</h2>
-          <pre>{JSON.stringify(studyData, null, 2)}</pre>
-        </div>
-      )}
+      <div className="backButtonContainer">
+        <button onClick={() => window.history.back()}>Back</button>
+      </div>
+      <div className="visualizeStudyBox">
+        <h1>Study: {studyData}</h1>
+        {/* {studyData && (
+          <div>
+            <h2>Study Data:</h2>
+            <pre>{JSON.stringify(studyData, null, 2)}</pre>
+          </div>
+        )} */}
+      </div>
     </div>
   );
 }
