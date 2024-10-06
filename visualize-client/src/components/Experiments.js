@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Experiments.css"; // Ensure this path is correct
+import { useNavigate } from "react-router-dom";
 
 export default function Experiments() {
+  const [osd379Data, setOsd379Data] = useState([]);
+  const [osd665Data, setOsd665Data] = useState([]);
+  const navigate = useNavigate();
+
+  const getOsd379Data = async () => {
+    navigate("/visualize/379", { state: { studyId: 379 } });
+  };
+
+  const getOsd665Data = async () => {
+    navigate("/visualize/665", { state: { studyId: 665 } });
+  };
+
   return (
     <div className="experimentsContainer bodyScreenFit">
       {/* image background with an overlay */}
@@ -28,7 +41,7 @@ export default function Experiments() {
             </p>
           </div>
 
-          <button>View Details</button>
+          <button onClick={getOsd379Data}>View Details</button>
         </div>
         <div className="experimentsStudyCard card665">
           <div className="experimentsHeadingBox">
@@ -42,7 +55,7 @@ export default function Experiments() {
             </p>
           </div>
 
-          <button>View Details</button>
+          <button onClick={getOsd665Data}>View Details</button>
         </div>
       </div>
     </div>
