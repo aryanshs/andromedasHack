@@ -1,0 +1,47 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4%;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 4%;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memberImage {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.memberName {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #d2e2e7;
+  text-align: center;
+}
+
+/* Optional hover effect */
+.memberImage:hover {
+  transform: scale(1.05);
+}
