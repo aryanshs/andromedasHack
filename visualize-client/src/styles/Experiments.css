@@ -7,45 +7,28 @@
 .experimentsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10%;
 }
 
 /* Background image container with the solar system */
 .experimentSolarImageContainer {
-  position: relative;
-  width: 90%;
-  height: 70vh; /* Adjust the height for your background image */
-  background-image: url("../images/solarSystem.png"); /* Background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   color: white;
-  border-radius: 40px;
-  overflow: hidden; /* Hide overflow content */
 }
 
 .experimentSolarImageContainer .experimentsHeadingContainer {
-  padding: 5% 0 0 3%;
+  padding: 30% 0 0 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: max-content;
 }
-/* Semi-transparent overlay to blend the image */
-/* .imageOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-} */
+
 .experimentSolarImageContainer .experimentsHeadingContainer h1 {
   margin: 0 0 20px 0;
   line-height: 1;
@@ -65,10 +48,11 @@
 
 /* Container for the experiment cards */
 .experimentsStudyCardsContainer {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 100px;
-  margin-top: -225px; /* Pull the cards upwards slightly */
+  /* margin-top: -225px; Pull the cards upwards slightly */
   z-index: 3; /* Ensure it's above the image */
 }
 
@@ -121,11 +105,11 @@
 }
 
 .card379 {
-  background-color: #66696b;
+  background-color: #aa4535;
 }
 
 .card665 {
-  background-color: #444b12;
+  background-color: #0b3d91;
 }
 
 /* Search bar container inside the heading */

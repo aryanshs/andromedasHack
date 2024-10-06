@@ -1,9 +1,20 @@
-import React from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink
+import React, { useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom"; // Import useLocation
 import nasaLogo from "../images/nasaLogo.png";
 import "../styles/Navigation.css";
 
-export default function Navigation() {
+export default function Navigation({ setExpermentBackground }) {
+  const location = useLocation();
+
+  // Update background based on the path inside Navigation
+  useEffect(() => {
+    if (location.pathname === "/experiments") {
+      setExpermentBackground(true); // Set background for experiments
+    } else {
+      setExpermentBackground(false); // Reset background for other pages
+    }
+  }, [location.pathname, setExpermentBackground]);
+
   return (
     <nav className="navColumn">
       <img className="nasaLogo" src={nasaLogo} alt="NASA logo" />

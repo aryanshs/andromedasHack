@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Experiments.css"; // Ensure this path is correct
 import { useNavigate } from "react-router-dom";
 
-export default function Experiments() {
+export default function Experiments({ setExpermentBackground }) {
   const [osd379Data, setOsd379Data] = useState([]);
   const [osd665Data, setOsd665Data] = useState([]);
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ export default function Experiments() {
     <div className="experimentsContainer bodyScreenFit">
       {/* image background with an overlay */}
       <div className="experimentSolarImageContainer">
-        <div className="imageOverlay"></div> {/* Semi-transparent overlay */}
+        {/* <div className="imageOverlay"></div> Semi-transparent overlay */}
         <div className="experimentsHeadingContainer">
           <h1>Explore</h1>
           <h1>Experiments</h1>
