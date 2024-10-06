@@ -15,6 +15,10 @@ export default function Experiments({ setExpermentBackground }) {
     navigate("/visualize/665", { state: { studyId: 665 } });
   };
 
+  const visualizeStudy = () => {
+    window.location.href = "/viz_379.html";
+  };
+
   return (
     <div className="experimentsContainer bodyScreenFit">
       {/* image background with an overlay */}
@@ -41,7 +45,7 @@ export default function Experiments({ setExpermentBackground }) {
             </p>
           </div>
 
-          <button onClick={getOsd379Data}>View Details</button>
+          <button onClick={visualizeStudy}>View Details</button>
         </div>
         <div className="experimentsStudyCard card665">
           <div className="experimentsHeadingBox">
