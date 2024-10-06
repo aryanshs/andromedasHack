@@ -8,6 +8,7 @@
 
 .navColumn .nasaLogo {
   width: 4%;
+  cursor: pointer;
 }
 
 .navLinks {

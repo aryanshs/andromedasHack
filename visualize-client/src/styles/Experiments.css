@@ -58,6 +58,9 @@
 
 /* Individual experiment card */
 .experimentsStudyCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -80,7 +83,7 @@
 
 .experimentsStudyCard .experimentsDescriptionBox p {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
