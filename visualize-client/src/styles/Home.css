@@ -1,55 +1,115 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-.homeContainer{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 5%;
+.homeContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
 }
 
 .home-heading {
-    color: #D2E2E7;
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
-    max-width: 400px; 
-    white-space: normal;
-    margin-top: 10%;
-  }
+  font-size: 3.5rem; /* Larger font for emphasis */
+  font-weight: bold;
+  line-height: 1.2;
+  max-width: 600px;
+  white-space: normal;
+  text-align: center;
+  margin-top: 10%;
 
+  /* Brighter NASA color gradient */
+  background: linear-gradient(90deg, #f89889 1%, #ffffff 80%);
+  background-clip: text; /* Apply the gradient only to the text */
+  -webkit-background-clip: text; /* For WebKit compatibility */
+  color: transparent; /* Make the text itself transparent to show the gradient */
+
+  /* Subtle 3D shadow */
+  text-shadow: 1px 1px 3px rgb(204, 227, 242),
+    /* Top-left shadow */ 2px 2px 6px rrgb(204, 227, 242); /* Bottom-right shadow for more depth */
+}
+
+.paragraph {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
 .home-text {
-    color: white;
+  color: white;
+  text-align: center;
+}
+
+.homeExperimentButton {
+  background-color: #b1cbbd; /* Soft green */
+  color: black; /* Black text */
+  padding: 10px 20px;
+  border-radius: 8px; /* Slightly reduce the roundness */
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  border: 2px solid transparent; /* Border removed, but could change this for other effects */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+/* Hover effect */
+.homeExperimentButton:hover {
+  background-color: #a1b3a6; /* Slightly darker shade on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Increase shadow for hover effect */
+  border: 2px solid #8fa594; /* Optional: Add a subtle border color on hover */
+}
+
+.homeAboutButton {
+  background-color: #1f78a0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.homeAboutButton:hover {
+  background-color: #297699; /* Slightly darker shade on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Increase shadow for hover effect */
+  border: 2px solid #8fa594; /* Optional: Add a subtle border color on hover */
+}
+
+.homeButtons {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.homeImage {
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Softer, subtle border */
+  border-radius: 20px; /* Increase rounding for smoother edges */
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effect */
+  width: 100%; /* Ensures the image fits well in its container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Hover effect */
+.homeImage:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+  .homeImage {
+    border-radius: 15px; /* Slightly reduce rounding on smaller screens */
   }
-
-.experiment{
-    text-decoration: none !important;
-    color: black !important;
-    padding: 14px 25px;
-    text-align: left;
-    display: inline-block;
-    background-color: #B1CBBD;
-    border-radius: 8px;
-    margin-right: 20px;
 }
-
-.about{
-    text-decoration: none;
-    color: black;
-    padding: 14px 25px;
-    text-align: right;
-    text-decoration: none;
-    display: inline-block;
-    background-color:#1F78A0;
-    border-radius: 8px;
-
-    
-}
-
-.homeImage{
-    border: 5px solid; /* Change the border color and width as needed */
-    border-radius: 15px; /* Adjust this value for more or less rounding */
-    overflow: hidden;   
-}
-  

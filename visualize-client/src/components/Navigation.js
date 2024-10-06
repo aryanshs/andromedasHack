@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom"; // Import useLocation
+import { useNavigate } from "react-router-dom";
 import nasaLogo from "../images/nasaLogo.png";
 import "../styles/Navigation.css";
 
 export default function Navigation({ setExpermentBackground }) {
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Update background based on the path inside Navigation
   useEffect(() => {
@@ -17,7 +19,12 @@ export default function Navigation({ setExpermentBackground }) {
 
   return (
     <nav className="navColumn">
-      <img className="nasaLogo" src={nasaLogo} alt="NASA logo" />
+      <img
+        className="nasaLogo"
+        src={nasaLogo}
+        alt="NASA logo"
+        onClick={() => navigate("/")}
+      />
       <ul className="navLinks">
         <li>
           <NavLink
