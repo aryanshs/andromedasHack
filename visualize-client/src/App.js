@@ -1,6 +1,4 @@
-// src/App.js
 import React, { useState } from "react";
-import VisualizeStudy from "./components/VisualizeStudy";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Experiments from "./components/Experiments";
@@ -10,10 +8,16 @@ import Visualization from "./components/Visualization";
 import "./App.css";
 
 const App = () => {
+  const [isExperimentSelected, setIsExperimentSelected] = useState(false);
+
   return (
     <Router>
-      <div className="appContainer">
-        <Navigation />
+      <div
+        className={`appContainer ${
+          isExperimentSelected ? "experimentsBackground" : ""
+        }`}
+      >
+        <Navigation setExpermentBackground={setIsExperimentSelected} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

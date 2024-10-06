@@ -1,11 +1,18 @@
 .appContainer {
-  background: rgb(27, 29, 35);
-  background: linear-gradient(
-    230deg,
-    rgba(27, 29, 35, 1) 5%,
-    rgba(51, 72, 85, 1) 39%,
-    rgba(27, 29, 35, 1) 100%
-  );
+  background-image: url("./images/homeBackground.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+}
+
+/* Ensure no border-radius for the background image container */
+.experimentsBackground {
+  background-image: url("./images/solarSystem.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
 }
 
 .bodyScreenFit {
