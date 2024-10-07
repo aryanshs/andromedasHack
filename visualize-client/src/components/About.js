@@ -4,12 +4,13 @@ import placeholderImage from "../images/placeholder.png"; // Placeholder image f
 import marcus from "../images/marcus.jpg";
 import nicole from "../images/nicole.jpg";
 import aryansh from "../images/aryansh.jpeg";
+import laiba from "../images/laiba.jpg";
 
 const teamMembers = [
   { id: 1, name: "Marcus Yuen", image: marcus },
   { id: 2, name: "Aryansh Sharma", image: aryansh },
   { id: 3, name: "Maryam Sikander" },
-  { id: 4, name: "Laiba Arshad" },
+  { id: 4, name: "Laiba Arshad", image: laiba },
   { id: 5, name: "Nicole Yang", image: nicole },
   { id: 6, name: "Uma Velmurugan" },
 ];
