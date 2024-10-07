@@ -5,6 +5,7 @@ import BannerImage from "../images/homepage-mouse.jfif";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
+import rat from "../images/rat.jpg";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -41,9 +42,7 @@ export default function Home() {
       </div>
 
       <div className="right">
-        <div className="homeImage">
-          <img src={BannerImage} alt="mouse in space.img" />
-        </div>
+        <img src={rat} alt="mouse in space.img" />
       </div>
     </div>
   );

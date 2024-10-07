@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/About.css";
 import placeholderImage from "../images/placeholder.png"; // Placeholder image for members without images
 import marcus from "../images/marcus.jpg";
-import nicole from "../images/nicole.jpeg";
+import nicole from "../images/nicole.jpg";
 import aryansh from "../images/aryansh.jpeg";
 
 const teamMembers = [

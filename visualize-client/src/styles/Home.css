@@ -91,21 +91,40 @@
   justify-content: center;
 }
 
-.homeImage {
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Softer, subtle border */
+.right {
+  display: flex;
+}
+.right img {
+  width: 80%;
+  height: 50%;
   border-radius: 20px; /* Increase rounding for smoother edges */
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effect */
-  width: 100%; /* Ensures the image fits well in its container */
-  height: auto; /* Maintains aspect ratio */
+
+  /* Floating animation */
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0); /* Start and end at the original position */
+  }
+  25% {
+    transform: translate(10px, -10px); /* Move up and right */
+  }
+  50% {
+    transform: translate(
+      0,
+      -20px
+    ); /* Move up further, back to center horizontally */
+  }
+  75% {
+    transform: translate(-10px, -10px); /* Move up and to the left */
+  }
 }
 
 /* Hover effect */
-.homeImage:hover {
-  transform: scale(1.05); /* Slightly enlarge the image on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-}
 
 /* Optional: Responsive adjustments */
 @media (max-width: 768px) {
